@@ -11,7 +11,7 @@ Flutter base library.
 
 ## Installation
 
-Add `influx: ^0.1.0` to your `pubspec.yaml` dependencies and import it as follows:
+Add `influx: ^0.1.1` to your `pubspec.yaml` dependencies and import it as follows:
 
 ```dart
 import 'package:influx/influx.dart';
@@ -76,7 +76,7 @@ class AbcViewState extends State<AbcView> implements ModelView
     }
 
     @override
-    List<dynamic> getViewDependencyList()
+    List<dynamic> getModelList()
     {
         return [ abc ];
     }

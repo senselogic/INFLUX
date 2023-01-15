@@ -9,6 +9,6 @@ abstract class ModelView
 
     // ~~
 
-    List<dynamic> getViewDependencyList(
+    List<dynamic> getModelList(
         );
 }

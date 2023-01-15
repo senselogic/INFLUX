@@ -42,11 +42,11 @@ class ModelViewManager
 
     static void manageChange(
         {
-            List<dynamic> updatedDependencyList = const []
+            List<dynamic> updatedModelList = const []
         }
         )
     {
-        if ( updatedDependencyList.isEmpty )
+        if ( updatedModelList.isEmpty )
         {
             for ( var modelView in modelViewSet )
             {
@@ -57,17 +57,17 @@ class ModelViewManager
         {
             for ( var modelView in modelViewSet )
             {
-                var viewDependencyList = modelView.getViewDependencyList();
+                var viewModelList = modelView.getModelList();
 
-                if ( viewDependencyList.isEmpty )
+                if ( viewModelList.isEmpty )
                 {
                     modelView.updateView();
                 }
                 else
                 {
-                    for ( var updatedDependency in updatedDependencyList )
+                    for ( var updatedModel in updatedModelList )
                     {
-                        if ( viewDependencyList.contains( updatedDependency ) )
+                        if ( viewModelList.contains( updatedModel ) )
                         {
                             modelView.updateView();
 

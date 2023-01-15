@@ -111,4 +111,4 @@ Eric Pelzer (ecstatic.coder@gmail.com).
 
 This project is licensed under the GNU Lesser General Public License version 3.
 
-See the [LICENSE.md](LICENSE.md) file for details.
+See the [LICENSE](LICENSE) file for details.

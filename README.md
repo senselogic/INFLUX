@@ -10,7 +10,18 @@ Flutter base library.
 
 ## Installation
 
-Add `influx: ^0.1.3` to your `pubspec.yaml` dependencies and import it as follows:
+Add `influx: ^0.1.4` to your `pubspec.yaml` dependencies:
+
+```dart
+
+dependencies:
+  flutter:
+    sdk: flutter
+  ...
+  influx: ^0.1.4
+```
+
+Import it:
 
 ```dart
 import 'package:influx/influx.dart';

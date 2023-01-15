@@ -1,4 +1,8 @@
-## 0.1.3
+## 0.1.4
+
+* Updated documentation.
+
+## 0.1.4
 
 * Updated documentation.
 

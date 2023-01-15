@@ -6,12 +6,11 @@ Flutter base library.
 
 ## Features
 
-*   Model view manager
-*   Navigation observer
+*   Model view manager with navigation observer
 
 ## Installation
 
-Add `influx: ^0.1.1` to your `pubspec.yaml` dependencies and import it as follows:
+Add `influx: ^0.1.2` to your `pubspec.yaml` dependencies and import it as follows:
 
 ```dart
 import 'package:influx/influx.dart';

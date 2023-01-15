@@ -10,7 +10,7 @@ Flutter base library.
 
 ## Installation
 
-Add `influx: ^0.1.2` to your `pubspec.yaml` dependencies and import it as follows:
+Add `influx: ^0.1.3` to your `pubspec.yaml` dependencies and import it as follows:
 
 ```dart
 import 'package:influx/influx.dart';
@@ -21,8 +21,6 @@ import 'package:influx/influx.dart';
 ### Model view manager
 
 ```dart
-import "model_view_navigation_observer.dart";
-
 class AppViewState extends State<AppView>
 {
     ...
@@ -40,9 +38,6 @@ class AppViewState extends State<AppView>
 ```
 
 ```dart
-import "model_view.dart";
-import "model_view_manager.dart";
-
 class AbcViewState extends State<AbcView> implements ModelView
 {
     Abc
@@ -83,8 +78,6 @@ class AbcViewState extends State<AbcView> implements ModelView
 ```
 
 ```dart
-import "model_view_manager.dart";
-
 class Abc
 {
     ...

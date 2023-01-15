@@ -1,8 +1,12 @@
-## 0.1.4
+## 0.1.5
 
 * Updated documentation.
 
 ## 0.1.4
+
+* Updated documentation.
+
+## 0.1.3
 
 * Updated documentation.
 

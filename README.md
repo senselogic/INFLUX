@@ -10,7 +10,7 @@ Flutter base library.
 
 ## Installation
 
-Add `influx: ^0.1.4` to your `pubspec.yaml` dependencies:
+Add `influx: ^0.1.5` to your `pubspec.yaml` dependencies:
 
 ```dart
 
@@ -18,7 +18,7 @@ dependencies:
   flutter:
     sdk: flutter
   ...
-  influx: ^0.1.4
+  influx: ^0.1.5
 ```
 
 Import it:
@@ -75,15 +75,15 @@ class AbcViewState extends State<AbcView> implements ModelView
     }
 
     @override
-    void updateView()
-    {
-        setState( () {} );
-    }
-
-    @override
     List<dynamic> getModelList()
     {
         return [ abc ];
+    }
+
+    @override
+    void updateView()
+    {
+        setState( () {} );
     }
 }
 ```

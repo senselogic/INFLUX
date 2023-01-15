@@ -4,11 +4,11 @@ abstract class ModelView
 {
     // -- OPERATIONS
 
-    void updateView(
+    List<dynamic> getModelList(
         );
 
     // ~~
 
-    List<dynamic> getModelList(
+    void updateView(
         );
 }

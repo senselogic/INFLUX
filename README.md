@@ -11,7 +11,7 @@ Flutter base library.
 
 ## Installation
 
-Add `influx: ^0.1.0` to your `pubspec.yaml` dependencies. And import it:
+Add `influx: ^0.1.0` to your `pubspec.yaml` dependencies and import it as follows:
 
 ```dart
 import 'package:influx/influx.dart';

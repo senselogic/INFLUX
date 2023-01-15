@@ -6,7 +6,7 @@ Flutter base library.
 
 ## Features
 
-*   Update manager
+*   Model view manager
 *   Navigation observer
 
 ## Installation
@@ -19,7 +19,7 @@ import 'package:influx/influx.dart';
 
 ## Examples
 
-### Update manager
+### Model view manager
 
 ```dart
 import "model_view_navigation_observer.dart";

@@ -1,6 +1,10 @@
+## 0.1.7
+
+* Added instance to ViewManager.
+
 ## 0.1.6
 
-* Updated API.
+* Renamed View.
 
 ## 0.1.5
 

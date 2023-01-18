@@ -2,7 +2,7 @@ name: influx
 description: Flutter base library.
 homepage: https://github.com/senselogic/INFLUX
 repository: https://github.com/senselogic/INFLUX
-version: 0.1.6
+version: 0.1.7
 
 environment:
   sdk: '>=2.14.0 <3.0.0'

@@ -26,7 +26,7 @@ class ViewNavigatorObserver extends NavigatorObserver
         Route<dynamic>? previousRoute
         )
     {
-        ViewManager.updateViews();
+        ViewManager.instance.updateViews();
 
         super.didPop( route, previousRoute );
     }

@@ -10,7 +10,7 @@ Flutter base library.
 
 ## Installation
 
-Add `influx: ^0.1.6` to your `pubspec.yaml` dependencies:
+Add `influx: ^0.1.7` to your `pubspec.yaml` dependencies:
 
 ```dart
 
@@ -18,7 +18,7 @@ dependencies:
   flutter:
     sdk: flutter
   ...
-  influx: ^0.1.6
+  influx: ^0.1.7
 ```
 
 Import it:
@@ -59,7 +59,7 @@ class AbcViewState extends State<AbcView> implements View
     @override
     Widget build( BuildContext build_context )
     {
-        ViewManager.addView( this );
+        ViewManager.instance.addView( this );
 
         return Scaffold(
             ...
@@ -69,7 +69,7 @@ class AbcViewState extends State<AbcView> implements View
     @override
     void dispose()
     {
-        ViewManager.removeView( this );
+        ViewManager.instance.removeView( this );
 
         super.dispose();
     }
@@ -97,7 +97,7 @@ class Abc
         )
     {
         ...
-        ViewManager.updateViews( [ this ] );
+        ViewManager.instance.updateViews( [ this ] );
     }
 }
 ```

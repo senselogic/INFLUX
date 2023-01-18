@@ -8,8 +8,10 @@ class ViewManager
 {
     // -- ATTRIBUTES
 
-    static Set<View>
+    Set<View>
         viewSet = {};
+    static ViewManager
+        instance = ViewManager();
 
     // -- CONSTRUCTORS
 
@@ -19,7 +21,7 @@ class ViewManager
 
     // -- OPERATIONS
 
-    static void addView(
+    void addView(
         View view
         )
     {
@@ -31,7 +33,7 @@ class ViewManager
 
     // ~~
 
-    static void removeView(
+    void removeView(
         View view
         )
     {
@@ -40,7 +42,7 @@ class ViewManager
 
     // ~~
 
-    static void updateViews(
+    void updateViews(
         {
             List<dynamic> updatedData = const []
         }

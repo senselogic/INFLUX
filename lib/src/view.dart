@@ -1,10 +1,10 @@
 // -- TYPES
 
-abstract class ModelView
+abstract class View
 {
     // -- OPERATIONS
 
-    List<dynamic> getModelList(
+    List<dynamic> getViewData(
         );
 
     // ~~

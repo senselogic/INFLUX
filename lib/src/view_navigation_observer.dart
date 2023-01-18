@@ -1,20 +1,20 @@
 // -- IMPORTS
 
 import "package:flutter/material.dart";
-import "model_view_manager.dart";
+import "view_manager.dart";
 
 // -- TYPES
 
-class ModelViewNavigatorObserver extends NavigatorObserver
+class ViewNavigatorObserver extends NavigatorObserver
 {
     // -- ATTRIBUTES
 
-    static ModelViewNavigatorObserver
-        instance = ModelViewNavigatorObserver();
+    static ViewNavigatorObserver
+        instance = ViewNavigatorObserver();
 
     // -- CONSTRUCTORS
 
-    ModelViewNavigatorObserver(
+    ViewNavigatorObserver(
         ) :
         super();
 
@@ -26,7 +26,7 @@ class ModelViewNavigatorObserver extends NavigatorObserver
         Route<dynamic>? previousRoute
         )
     {
-        ModelViewManager.manageChange();
+        ViewManager.updateViews();
 
         super.didPop( route, previousRoute );
     }

@@ -10,7 +10,7 @@ Flutter base library.
 
 ## Installation
 
-Add `influx: ^0.1.5` to your `pubspec.yaml` dependencies:
+Add `influx: ^0.1.6` to your `pubspec.yaml` dependencies:
 
 ```dart
 
@@ -18,7 +18,7 @@ dependencies:
   flutter:
     sdk: flutter
   ...
-  influx: ^0.1.5
+  influx: ^0.1.6
 ```
 
 Import it:
@@ -41,7 +41,7 @@ class AppViewState extends State<AppView>
     {
         return MaterialApp(
             ...
-            navigatorObservers: <NavigatorObserver>[ ModelViewNavigatorObserver.instance ],
+            navigatorObservers: <NavigatorObserver>[ ViewNavigatorObserver.instance ],
             ...
             );
     }
@@ -49,7 +49,7 @@ class AppViewState extends State<AppView>
 ```
 
 ```dart
-class AbcViewState extends State<AbcView> implements ModelView
+class AbcViewState extends State<AbcView> implements View
 {
     Abc
         abc;
@@ -59,7 +59,7 @@ class AbcViewState extends State<AbcView> implements ModelView
     @override
     Widget build( BuildContext build_context )
     {
-        ModelViewManager.addView( this );
+        ViewManager.addView( this );
 
         return Scaffold(
             ...
@@ -69,13 +69,13 @@ class AbcViewState extends State<AbcView> implements ModelView
     @override
     void dispose()
     {
-        ModelViewManager.removeView( this );
+        ViewManager.removeView( this );
 
         super.dispose();
     }
 
     @override
-    List<dynamic> getModelList()
+    List<dynamic> getViewData()
     {
         return [ abc ];
     }
@@ -97,7 +97,7 @@ class Abc
         )
     {
         ...
-        ModelViewManager.manageChange( [ this ] );
+        ViewManager.updateViews( [ this ] );
     }
 }
 ```

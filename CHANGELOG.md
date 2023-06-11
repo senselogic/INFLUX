@@ -1,10 +1,14 @@
+## 0.2.0
+
+* Changed types.
+
 ## 0.1.7
 
-* Added instance to ViewManager.
+* Added instance to DataViewManager.
 
 ## 0.1.6
 
-* Renamed View.
+* Renamed DataView.
 
 ## 0.1.5
 

@@ -6,11 +6,11 @@ Flutter base library.
 
 ## Features
 
-*   Model view manager with navigation observer
+*   Model dataView manager with navigation observer
 
 ## Installation
 
-Add `influx: ^0.1.7` to your `pubspec.yaml` dependencies:
+Add `influx: ^0.2.0` to your `pubspec.yaml` dependencies:
 
 ```dart
 
@@ -18,7 +18,7 @@ dependencies:
   flutter:
     sdk: flutter
   ...
-  influx: ^0.1.7
+  influx: ^0.2.0
 ```
 
 Import it:
@@ -29,7 +29,7 @@ import 'package:influx/influx.dart';
 
 ## Examples
 
-### Model view manager
+### Model dataView manager
 
 ```dart
 class AppViewState extends State<AppView>
@@ -41,7 +41,7 @@ class AppViewState extends State<AppView>
     {
         return MaterialApp(
             ...
-            navigatorObservers: <NavigatorObserver>[ ViewNavigatorObserver.instance ],
+            navigatorObservers: <NavigatorObserver>[ DataViewNavigatorObserver.instance ],
             ...
             );
     }
@@ -49,7 +49,7 @@ class AppViewState extends State<AppView>
 ```
 
 ```dart
-class AbcViewState extends State<AbcView> implements View
+class AbcViewState extends State<AbcView> implements DataView
 {
     Abc
         abc;
@@ -59,7 +59,7 @@ class AbcViewState extends State<AbcView> implements View
     @override
     Widget build( BuildContext build_context )
     {
-        ViewManager.instance.addView( this );
+        DataViewManager.instance.addView( this );
 
         return Scaffold(
             ...
@@ -69,7 +69,7 @@ class AbcViewState extends State<AbcView> implements View
     @override
     void dispose()
     {
-        ViewManager.instance.removeView( this );
+        DataViewManager.instance.removeView( this );
 
         super.dispose();
     }
@@ -97,14 +97,14 @@ class Abc
         )
     {
         ...
-        ViewManager.instance.updateViews( [ this ] );
+        DataViewManager.instance.updateViews( [ this ] );
     }
 }
 ```
 
 ## Version
 
-0.1
+0.2
 
 ## Author
 

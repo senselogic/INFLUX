@@ -1,6 +1,6 @@
 // -- TYPES
 
-abstract class View
+abstract class DataView
 {
     // -- OPERATIONS
 

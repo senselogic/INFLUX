@@ -1,43 +1,43 @@
 // -- IMPORTS
 
-import "view.dart";
+import "data_view.dart";
 
 // -- TYPES
 
-class ViewManager
+class DataViewManager
 {
     // -- ATTRIBUTES
 
-    Set<View>
-        viewSet = {};
-    static ViewManager
-        instance = ViewManager();
+    Set<DataView>
+        dataViewSet = {};
+    static DataViewManager
+        instance = DataViewManager();
 
     // -- CONSTRUCTORS
 
-    ViewManager(
+    DataViewManager(
         ) :
         super();
 
     // -- OPERATIONS
 
     void addView(
-        View view
+        DataView dataView
         )
     {
-        if ( !viewSet.contains( view ) )
+        if ( !dataViewSet.contains( dataView ) )
         {
-            viewSet.add( view );
+            dataViewSet.add( dataView );
         }
     }
 
     // ~~
 
     void removeView(
-        View view
+        DataView dataView
         )
     {
-        viewSet.remove( view );
+        dataViewSet.remove( dataView );
     }
 
     // ~~
@@ -50,20 +50,20 @@ class ViewManager
     {
         if ( updatedData.isEmpty )
         {
-            for ( var view in viewSet )
+            for ( var dataView in dataViewSet )
             {
-                view.updateView();
+                dataView.updateView();
             }
         }
         else
         {
-            for ( var view in viewSet )
+            for ( var dataView in dataViewSet )
             {
-                var viewData = view.getViewData();
+                var viewData = dataView.getViewData();
 
                 if ( viewData.isEmpty )
                 {
-                    view.updateView();
+                    dataView.updateView();
                 }
                 else
                 {
@@ -71,7 +71,7 @@ class ViewManager
                     {
                         if ( viewData.contains( updatedDependency ) )
                         {
-                            view.updateView();
+                            dataView.updateView();
 
                             break;
                         }
